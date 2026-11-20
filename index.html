@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MB 525A — Software Engineering &amp; Digital Products</title>
+  <meta name="description" content="MB 525A is a Lithuanian software engineering company specializing in backend architecture, cloud microservices, and consumer mobile &amp; web applications." />
+  <style>
+    :root {
+      --bg: #0f172a;
+      --surface: #1e293b;
+      --surface-light: #f8fafc;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --text-inverse: #f8fafc;
+      --accent: #2563eb;
+      --accent-hover: #1d4ed8;
+      --border: #e2e8f0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text-main);
+      background-color: #ffffff;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Header */
+    header {
+      background-color: var(--bg);
+      color: var(--text-inverse);
+      border-bottom: 1px solid #334155;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+    }
+
+    .logo {
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .logo span {
+      color: #60a5fa;
+    }
+
+    .nav-links a {
+      color: #cbd5e1;
+      text-decoration: none;
+      margin-left: 24px;
+      font-size: 0.95rem;
+    }
+
+    .nav-links a:hover {
+      color: #ffffff;
+    }
+
+    /* Hero */
+    .hero {
+      background-color: var(--bg);
+      color: var(--text-inverse);
+      padding: 72px 0 88px;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      line-height: 1.2;
+      max-width: 720px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.125rem;
+      color: #cbd5e1;
+      max-width: 640px;
+      margin-bottom: 32px;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: var(--accent);
+      color: #ffffff;
+      padding: 12px 24px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .btn:hover {
+      background-color: var(--accent-hover);
+    }
+
+    /* Sections */
+    section {
+      padding: 64px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    section.alt {
+      background-color: var(--surface-light);
+    }
+
+    h2 {
+      font-size: 1.75rem;
+      margin-bottom: 12px;
+    }
+
+    .section-subtitle {
+      color: var(--text-muted);
+      max-width: 640px;
+      margin-bottom: 36px;
+    }
+
+    /* Grid Cards */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 28px;
+    }
+
+    .card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 16px;
+    }
+
+    .card a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    .card a:hover {
+      text-decoration: underline;
+    }
+
+    /* Company Details Table */
+    .details-box {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 28px;
+      max-width: 680px;
+    }
+
+    .detail-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+      gap: 16px;
+    }
+
+    .detail-row:last-child {
+      border-bottom: none;
+    }
+
+    .detail-label {
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    .detail-value {
+      color: var(--text-muted);
+      text-align: right;
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--bg);
+      color: #94a3b8;
+      padding: 40px 0;
+      font-size: 0.9rem;
+    }
+
+    .footer-grid {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    footer a {
+      color: #cbd5e1;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 640px) {
+      .hero h1 {
+        font-size: 1.9rem;
+      }
+      .detail-row {
+        flex-direction: column;
+        gap: 4px;
+      }
+      .detail-value {
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container nav">
+      <a href="#" class="logo">MB <span>525A</span></a>
+      <nav class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#products">Products</a>
+        <a href="#company">Company</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="hero">
+      <div class="container">
+        <h1>Resilient Backend Systems &amp; Modern Mobile Applications</h1>
+        <p>
+          MB 525A is an independent software engineering firm based in Lithuania. We architect high-reliability distributed backend systems for enterprise clients and build focused mobile and SaaS products.
+        </p>
+        <a href="#contact" class="btn">Get in Touch</a>
+      </div>
+    </div>
+
+    <section id="services">
+      <div class="container">
+        <h2>Engineering Services</h2>
+        <p class="section-subtitle">
+          Specialized B2B software architecture, cloud modernization, and full-lifecycle product development.
+        </p>
+        <div class="grid">
+          <div class="card">
+            <h3>Enterprise Backend Architecture</h3>
+            <p>
+              Design and implementation of fault-tolerant microservices using Java, Spring Boot, event-driven messaging (Kafka, ActiveMQ), and relational databases.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Legacy Modernization</h3>
+            <p>
+              Incremental decomposition of monolithic financial and enterprise platforms into modular, observable, cloud-ready services with zero downtime.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Mobile &amp; SaaS Development</h3>
+            <p>
+              End-to-end engineering of native Android and iOS applications, automotive infotainment integrations, and automated document-processing APIs.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="products" class="alt">
+      <div class="container">
+        <h2>Software Products</h2>
+        <p class="section-subtitle">
+          Proprietary applications designed, maintained, and published by MB 525A.
+        </p>
+        <div class="grid">
+          <div class="card">
+            <h3>TuneSnap</h3>
+            <p>
+              A multi-platform radio streaming application for mobile and in-vehicle infotainment systems featuring international station catalogs and real-time track metadata history.
+            </p>
+            <a href="https://gettunesnap.com" target="_blank" rel="noopener noreferrer">Visit gettunesnap.com &rarr;</a>
+          </div>
+          <div class="card">
+            <h3>File2Structure</h3>
+            <p>
+              An automated data extraction platform that transforms unstructured PDF, spreadsheet, document, and image files into validated JSON, CSV, XML, and SQL schemas.
+            </p>
+            <a href="https://fileparser.dev" target="_blank" rel="noopener noreferrer">Visit fileparser.dev &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="company">
+      <div class="container">
+        <h2>Legal &amp; Corporate Information</h2>
+        <p class="section-subtitle">
+          Official registration details for MB 525A (Mažoji bendrija).
+        </p>
+        <div class="details-box">
+          <div class="detail-row">
+            <span class="detail-label">Legal Entity Name</span>
+            <span class="detail-value">MB 525A</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Legal Form</span>
+            <span class="detail-value">Mažoji bendrija (Small Partnership)</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Registration Code</span>
+            <span class="detail-value">[YOUR_COMPANY_CODE]</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Jurisdiction</span>
+            <span class="detail-value">Republic of Lithuania</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Registered Address</span>
+            <span class="detail-value">[YOUR_REGISTERED_ADDRESS], Lithuania</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Official Contact Email</span>
+            <span class="detail-value"><a href="mailto:info@525a.lt">info@525a.lt</a></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="alt">
+      <div class="container">
+        <h2>Contact &amp; Support</h2>
+        <p class="section-subtitle">
+          For software engineering inquiries, business correspondence, or application support, please contact us directly.
+        </p>
+        <p>
+          <strong>Email:</strong> <a href="mailto:info@525a.lt">info@525a.lt</a><br />
+          <strong>Website:</strong> <a href="https://525a.lt">https://525a.lt</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        &copy; 2026 MB 525A. All rights reserved. Registered in Lithuania.
+      </div>
+      <div>
+        <a href="mailto:info@525a.lt">info@525a.lt</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
